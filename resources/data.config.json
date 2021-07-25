@@ -1,7 +1,11 @@
 {
 	"Login": {
-		"valid_email": "kakaageraldine@gmail.com",
+		"valid_email": "geraldinenwabude54@gmail.com",
 		"valid_pw": "Geraldine54!"
+	},
+	"ComposeEmail": {
+		"email": "geraldinenwabude54@gmail.com",
+		"body": "Automation Test",
+		"subject": "Hi"
 	}
-	
 }

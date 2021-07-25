@@ -56,7 +56,7 @@ public class SendMail {
                 message.addRecipient(Message.RecipientType.TO, toAddress);
             }
 
-            message.setSubject("AlphaPay Automated Test Result");
+            message.setSubject("Automated Test Result");
             MimeBodyPart messageBodyPart = new MimeBodyPart();
             messageBodyPart.setText("Hello," + "\n" +"Attached to this mail is the report of an automated test on iBank portal.  \nKindly download to view content. \n\nRegards, \nQuality Assurance");
 
@@ -66,7 +66,7 @@ public class SendMail {
             messageBodyPart = new MimeBodyPart();
 
             String file = System.getProperty("user.dir") + groupReport;
-            String fileName = "AlphaPay-Report.html";
+            String fileName = "SendEmail-Report.html";
             DataSource source = new FileDataSource(file);
             messageBodyPart.setDataHandler(new DataHandler(source));
             messageBodyPart.setFileName(fileName);
