@@ -1,51 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="ALphaPaySuite" parallel="tests" thread-count="1">
-	<parameter name="groupReport" value="/alphaPay.html" />
+<suite name="SendEmailSuite" parallel="tests" thread-count="1">
+	<parameter name="groupReport" value="/sendEmail.html" />
 	<parameter name="toMails" value="kakaageraldine@gmail.com" />
 	<parameter name="myBrowser" value="chrome" />
 	<parameter name="user" value="ValidLogin" />
 
-	<test name="LoginTests" preserve-order="true">
+	<test name="NewEmailTests" preserve-order="true">
 		<parameter name="myBrowser" value="chrome" />
 		<classes>
-			<class name="login.LoginTests">
-				<methods>
-					<include name="testSuccessfulLogin"></include>
-					<include name="testLogout"></include>
-				</methods>
-			</class>
-		</classes>
-	</test>
-	<test name="SignUpTests" preserve-order="true">
-		<parameter name="myBrowser" value="chrome" />
-		<classes>
-			<class name="signup.SignUpTests">
-				<methods>
-					<include name="testSuccessfulSignUp"></include>
-				</methods>
-			</class>
-		</classes>
-	</test>
-	<test name="UpdateDetailsTests" preserve-order="true">
-		<parameter name="myBrowser" value="chrome" />
-		<classes>
-			<class name="update.UpdateDetailsTests">
+			<class name="composeEmail.NewEmailTests">
 				<methods>
 					<include name="login"></include>
-					<include name="testUpdateDetails"></include>
-				</methods>
-			</class>
-		</classes>
-	</test>
-	<test name="ChangePasswordTests" preserve-order="true">
-		<parameter name="myBrowser" value="chrome" />
-		<parameter name="user" value="ChangePassword" />
-		<classes>
-			<class name="changepassword.ChangePasswordTests">
-				<methods>
-					<include name="login"></include>
-					<include name="testSucessfulChangePassword"></include>
+					<include name="testSendEmail"></include>
 				</methods>
 			</class>
 		</classes>
